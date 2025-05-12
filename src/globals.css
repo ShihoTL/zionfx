@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playwrite+AU+VIC:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Default (light mode) variables */
+:root {
+  --background: #FEFEFE;
+  --foreground: #171717;
+  --card-background: #E1E1DA;
+  --card-foreground: #171717;
+}
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    @apply max-h-screen w-screen overflow-x-hidden font-semibold font-inter;
+  }
+}
+
+@layer utilities {
+  /* TYPOGRAPHY */
+  .playwrite {
+    font-family: "Playwrite AU VIC", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .noto-sans-jp {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .abril-fatface {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .orbitron {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .heading-bold {
+    @apply text-[36px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  /* UTILITIES */
+  .invert-white {
+    @apply invert brightness-0 transition;
+  }
+
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+  }
+
+  .black-glassmorphism {
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(6px);
+  }
+
+  .gradient-text {
+    background: linear-gradient(45deg, #F0A9A3, #B24EFF, #9A6AD0);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 5s linear infinite;
+  }
+
+  .gradient-text2 {
+    background: linear-gradient(45deg, #FFFFFF, #FDFDFD, #1D1D1D, #F0F0FD);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 5s linear infinite;
+  }
+
+  .text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(123, 0, 0, 1);
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
+
+  .common-container {
+    @apply flex flex-col flex-1 items-center gap-10 overflow-scroll py-10 px-5 md:px-8 lg:p-14 custom-scrollbar;
+  }
+
+  .carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .mission {
+    background-image: url('/assets/lush.jpeg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Adjust as necessary */
+    /* Adjust as necessary */
+  }
+
+  /* Home */
+  .home-container {
+    @apply flex flex-col flex-1 items-center gap-10 overflow-scroll custom-scrollbar;
+  }
+
+  /* Topbar */
+  .topbar {
+    @apply sticky top-0 z-[99] w-full flex p-[1rem] justify-between items-center bg-white shadow-md;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    color: white;
+  }
+}
+
+/* Dark mode variables */
+.dark {
+  --background: #151513;
+  --foreground: #ededed;
+  --card-background: #26282B;
+  --card-foreground: #ededed;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+/* Example component styles */
+.card {
+  @apply bg-[var(--card-background)] text-[var(--card-foreground)];
+}
+
+.hero {
+  background-image: url('/images/hero-background.png');
+}
+
+/* ======== stream css overrides ======== */
+.str-video__call-stats {
+  max-width: 500px;
+  position: relative;
+}
+
+.str-video__speaker-layout__wrapper {
+  max-height: 700px;
+}
+
+.str-video__participant-details {
+  color: white;
+}
+
+.str-video__menu-container {
+  color: white;
+}
+
+.str-video__notification {
+  color: white;
+}
+
+.str-video__participant-list {
+  background-color: #1c1f2e;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  height: 100%;
+}
+
+.str-video__call-controls__button {
+  height: 40px;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.glassmorphism2 {
+  background: rgba(18, 17, 17, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ==== clerk class override ===== */
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+
+.cl-logoBox {
+  height: 40px;
+}
+
+.cl-dividerLine {
+  background: #252a41;
+  height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+  border: 3px solid #565761;
+}
+
+.cl-internal-wkkub3 {
+  color: white;
+}
+
+.cl-userButtonPopoverActionButton {
+  color: white;
+}
+
+/* ==== react date picker override ==== */
+.react-datepicker {
+  @apply bg-[var(--card-background)] border-none rounded-lg p-2 text-[var(--card-foreground)];
+}
+
+.react-datepicker__header {
+  @apply bg-[var(--card-background)] text-[var(--card-foreground)] border-b border-gray-700;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  @apply text-[var(--card-foreground)];
+}
+
+.react-datepicker__day,
+.react-datepicker__time-name {
+  @apply text-[var(--card-foreground)];
+}
+
+.react-datepicker__day-name {
+  @apply text-[var(--card-foreground)] font-bold;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  @apply bg-yellow-400 text-black;
+}
+
+.react-datepicker__day:hover {
+  @apply bg-yellow-200 text-black;
+}
+
+/* ==== customize the time input ==== */
+.react-datepicker-time__input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.react-datepicker-time__input input {
+  width: 100%;
+  /* Replace color-mix with a fallback opacity */
+  background-color: rgba(23, 23, 23, 0.1); /* Approximates color-mix(in srgb, var(--foreground) 10%, transparent) */
+  @apply border-none rounded-lg outline-none px-2 py-1 mt-0.5 text-[var(--card-foreground)] text-sm text-center h-full;
+}
+
+/* =============================== */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* animation */
+.show-block {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  animation: show 0.7s forwards linear;
+}
+
+@keyframes show {
+  0% {
+    animation-timing-function: ease-in;
+    width: 0%;
+  }
+  100% {
+    animation-timing-function: ease-in;
+    width: 100%;
+  }
+}
