@@ -6,7 +6,7 @@ import { useUser } from '@clerk/clerk-react';
 import Loader from '@/components/Loader';
 
 const API_KEY = import.meta.env.VITE_STREAM_API_KEY;
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://fd586825-0d73-4971-99bb-4dfb1e26c3f0-00-slfd6nsxdkqv.picard.replit.dev:3000';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://zionfx-node.onrender.com';
 
 const getStreamToken = async (userId: string): Promise<string> => {
   try {
