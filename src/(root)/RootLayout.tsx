@@ -86,7 +86,7 @@ export default function RootLayout() {
   const isUserReady = isLoaded && !userLoading && userInStore !== null;
   if (!isUserReady) {
     return (
-      <div className="h-[100dvh] w-full flex-center">
+      <div className="h-[100dvh] w-full flex-center bg-background">
         <Loader />
       </div>
     );

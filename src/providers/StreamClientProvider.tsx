@@ -91,7 +91,7 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
   }
 
   if (user && !videoClient) {
-    return <div className="h-[100dvh] w-full flex-center bg-light-2 dark:bg-dark-2"><Loader /></div>;
+    return <div className="h-[100dvh] w-full flex-center bg-background"><Loader /></div>;
   }
 
   return <StreamVideo client={videoClient}>{children}</StreamVideo>;

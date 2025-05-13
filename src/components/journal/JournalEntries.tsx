@@ -42,7 +42,7 @@ export const JournalEntries: React.FC = () => {
   }
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 grid items-start gap-4 grid-cols-1 md:grid-cols-3">
       {entries.map((entry) => (
         <Entry key={entry.id} entry={entry} />
       ))}

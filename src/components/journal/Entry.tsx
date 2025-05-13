@@ -62,7 +62,7 @@ export const Entry: React.FC<EntryProps> = ({ entry }) => {
 
   return (
     <div className="card rounded-lg p-4 hover:shadow-lg transition-shadow duration-200 animate-slide-up">
-      <div className="flex flex-col md:flex-row md:items-center justify-between space-y-3 md:space-y-0">
+      <div className="flex flex-col justify-between space-y-3">
         <div className="flex items-center space-x-4">
           <div className="flex flex-col w-full">
             <div className="w-full flex items-center justify-between">
