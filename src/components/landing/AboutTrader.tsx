@@ -54,7 +54,7 @@ const AboutTrader: React.FC = () => {
                 <div className="flex items-center bg-dark-800/90 backdrop-blur-sm rounded-lg p-4">
                   <div className="w-3 h-12 bg-gold-500 rounded mr-4"></div>
                   <div>
-                    <h3 className="font-heading font-bold text-xl text-white">Precious Daniels</h3>
+                    <h3 className="font-heading font-bold text-xl text-white">Precious Benjamin</h3>
                     <p className="text-gold-500 text-sm">Founder, AKA <span className="italic">"ZionFX"</span></p>
                   </div>
                 </div>

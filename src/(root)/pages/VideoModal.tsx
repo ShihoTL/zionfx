@@ -136,7 +136,7 @@ const VideoModal = () => {
         role="dialog"
         aria-modal="true"
       >
-        <div className="h-[100dvh] w-full bg-background rounded-lg flex flex-col lg:flex-row relative overflow-y-auto pb-[8rem]">
+        <div className="h-[100dvh] dw-full bg-background rounded-lg flex flex-col lg:flex-row relative overflow-y-auto pb-[8rem]">
           {/* Video Player */}
           <div className="sticky top-0 w-full max-w-[700px] aspect-video z-50">
             <div className="w-full aspect-video overflow-hidden relative">
@@ -239,7 +239,7 @@ const VideoModal = () => {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "100%" }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="absolute top-0 left-0 bg-background w-full h-full p-4"
+                  className="absolute top-0 left-0 bg-background shadow-md w-full h-full md:min-h-[100dvh] p-4"
                 >
                   <div className="flex items-center justify-between pb-4">
                     <div className="w-full flex flex-col">

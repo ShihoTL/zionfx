@@ -25,7 +25,7 @@
   }
 
   body {
-    @apply max-h-screen w-screen overflow-x-hidden font-semibold font-inter;
+    @apply max-h-screen w-screen overflow-x-hidden font-semibold bg-light-2 dark:bg-dark-4 font-inter;
   }
 }
 

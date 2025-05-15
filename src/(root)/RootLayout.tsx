@@ -94,7 +94,7 @@ export default function RootLayout() {
 
   return (
     <SignedIn>
-      <div className="h-full min-h-[100dvh] bg-background text-foreground relative">
+      <div className="h-full min-h-[100dvh] bg-background text-foreground relative max-w-[1600px] mx-auto">
         <Sidebar />
         <main className="md:pl-72 pt-14 md:pt-0">
           <Outlet />
