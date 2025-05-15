@@ -14,4 +14,8 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
   },
+  build: {
+    outDir: 'dist', // Output directory
+    sourcemap: false, // Disable sourcemaps for production
+  },
 });

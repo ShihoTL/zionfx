@@ -1,7 +1,7 @@
 {
   "name": "ZionFX Academy",
   "short_name": "ZionFX",
-  "start_url": "/",
+  "start_url": "/dashboard",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff", 

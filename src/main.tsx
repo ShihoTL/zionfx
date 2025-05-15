@@ -21,11 +21,8 @@ if (!PUBLISHABLE_KEY) {
 }
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then(reg => console.log('Service worker registered.', reg))
-      .catch(err => console.error('Service worker registration failed:', err));
+  navigator.serviceWorker.register('/sw.js').catch((error) => {
+    console.error('Service Worker registration failed:', error);
   });
 }
 
